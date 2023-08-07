@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "28195d8a-b4f9-42c3-9e3c-89403c59220b",
+		"name": "Salary Passport API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Position",
+			"item": [
+				{
+					"name": "CREATE POSITION",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Manager\",\r\n    \"salary\": 5000\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/position",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"position"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL POSITION",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/position",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"position"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT POSITION",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Trainee\",\r\n    \"salary\": 2000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/position/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"position",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE POSITION",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/position/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"position",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "CREATE EMPLOYEE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John\",\r\n    \"position_id\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL EMPLOYEE",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/employees",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT EMPLOYEE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Michlee\",\r\n    \"position_id\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/employees/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE EMPLOYEE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/employees/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "CREATE USER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nama Pengguna\",\r\n    \"email\": \"user@example.com\",\r\n    \"password\": \"password\",\r\n    \"c_password\": \"password\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN USER",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@admin.com\",\r\n    \"password\": \"admin\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET USER API",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMWY0N2JkMWMxYWIyNDZkMjI3OGQ2MmJjOWI4M2EzODIxZmY1NTlhZjM0NjdhOTAxM2Y5MjVlN2Y2ODVhN2U2ZGYzYjdlNWZkNTkxOTVjNWIiLCJpYXQiOjE2OTE0MjcyMjEuNTAzMzY2LCJuYmYiOjE2OTE0MjcyMjEuNTAzMzcsImV4cCI6MTcyMzA0OTYyMS40OTY0MjUsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.cLpqzmQyqKqVZ6R3gdGfQ6EF1ehKwoo9hplJw0eclKgyVEo5Y9ObuKeJyy6hj26ygt0unDHRWlZOJ_t4wChM2N4CYT5juRDkCAq4p24Se33-ceSieOL-rf_vA7hb63IhWNOqZiVgeKeTJU6effrDWsaEOFAbMXWHqL2VJEH1Z6_9-ASdTPugU6UNc04AFi317KvRqTc2ABGSvR-_4qx9AtP3CKbPH3W5aq9iGzb3MF33wMh9nxtQ9swElmCtGeAaQJn5v942BSdDPPhIcenVEiyvRlm1qFwTXTRMNHe63OSvxqpBal0KySJ-H851rjww8towbfs67tmdnW52xLH2FdS2Qsam8MX6BJtLZcyWG0nBjjpc51_yLMy_K_eJzDdIBsn6qrhsJ0r-9OWLYgPz5LUjqlFwLQqfy0ss89vugqo7ZOUB0kHp6bITj7IK_ffF_zsrlNQSTFkLR0_0Kx4rQ-M1Ro_mbs20ygpAQ9i5r5tkBso012YZKk5t9iWX1fNjMi7H9IdP2bLu7PB0oqu9wBmqxnjIiDJ466Wgnd2RMKTvkiiAC4Azw_g2ZptwD_JnF-eIBoVLQsnCaG21ylHeDoTyX_ZvHrxNkkTBALiCURhoLWkHQKan2V2kCzvaINsW-PP8rEcPtDVPxq8Gn5hqcmLNehohHbCJ6ZoFwN9-Uis",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/auth/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGOUT USER API",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMWY0N2JkMWMxYWIyNDZkMjI3OGQ2MmJjOWI4M2EzODIxZmY1NTlhZjM0NjdhOTAxM2Y5MjVlN2Y2ODVhN2U2ZGYzYjdlNWZkNTkxOTVjNWIiLCJpYXQiOjE2OTE0MjcyMjEuNTAzMzY2LCJuYmYiOjE2OTE0MjcyMjEuNTAzMzcsImV4cCI6MTcyMzA0OTYyMS40OTY0MjUsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.cLpqzmQyqKqVZ6R3gdGfQ6EF1ehKwoo9hplJw0eclKgyVEo5Y9ObuKeJyy6hj26ygt0unDHRWlZOJ_t4wChM2N4CYT5juRDkCAq4p24Se33-ceSieOL-rf_vA7hb63IhWNOqZiVgeKeTJU6effrDWsaEOFAbMXWHqL2VJEH1Z6_9-ASdTPugU6UNc04AFi317KvRqTc2ABGSvR-_4qx9AtP3CKbPH3W5aq9iGzb3MF33wMh9nxtQ9swElmCtGeAaQJn5v942BSdDPPhIcenVEiyvRlm1qFwTXTRMNHe63OSvxqpBal0KySJ-H851rjww8towbfs67tmdnW52xLH2FdS2Qsam8MX6BJtLZcyWG0nBjjpc51_yLMy_K_eJzDdIBsn6qrhsJ0r-9OWLYgPz5LUjqlFwLQqfy0ss89vugqo7ZOUB0kHp6bITj7IK_ffF_zsrlNQSTFkLR0_0Kx4rQ-M1Ro_mbs20ygpAQ9i5r5tkBso012YZKk5t9iWX1fNjMi7H9IdP2bLu7PB0oqu9wBmqxnjIiDJ466Wgnd2RMKTvkiiAC4Azw_g2ZptwD_JnF-eIBoVLQsnCaG21ylHeDoTyX_ZvHrxNkkTBALiCURhoLWkHQKan2V2kCzvaINsW-PP8rEcPtDVPxq8Gn5hqcmLNehohHbCJ6ZoFwN9-Uis",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
